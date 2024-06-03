@@ -6,6 +6,7 @@
     <title>Document</title>
     <!-- css link -->
     <link rel="stylesheet" href="style.css" class="css">
+    <script src="model.js"></script>
 
     <!-- bootstrap css link -->
 
@@ -14,7 +15,11 @@
 </head>
 <body>
     
-    <!-- home section -->
+                        <!-- home section -->
+
+
+
+
     
     <div class="backgroundimg ">
 
@@ -31,7 +36,12 @@
         </div>
         <br>
          <br>
-     <!-- SECOND SECTION -->
+
+
+
+                          <!-- SECOND SECTION -->
+
+
     
      <div class="text-center">
         <h4>REASONS TO CHOOSE US</h4>
@@ -80,9 +90,11 @@
             </div>
         </div>
     </div>
+
+
     
 
-     <!-- car booking -->
+                       <!-- car booking -->
 
 
      
@@ -97,13 +109,14 @@
         <br><br>
 
                <!-- form strating -->
-        <form action="connect.php"  method="post">
+        <form action="connect.php" id="form" method="post" onsubmit="return formvalidation()">
         <div class="row">
             <!-- name -->
             <div class=" col-sm-3 ">
             <div class="form-group">
                 <label for="" style="color: white;">name</label><br>
-                <input type="text" name="name" placeholder="Name" class="w-100" required>
+                <input type="text" name="name" placeholder="Name" class="w-100" id="cusname">
+                <span id="error" style="color: rgb(227, 2, 2);"  class="text-center container"></span>
             </div>
                 
             </div> 
@@ -112,7 +125,8 @@
                 
                 <div class="form-group">
                     <label for="" style="color: white;">PhoneNumber</label><br>
-                    <input type="text" name="PhoneNumber" placeholder="+91(xxx-xx-xx)" class="w-100" required>
+                    <input type="number" name="PhoneNumber" placeholder="+91(xxx-xxx-xxx)" class="w-100" id="phnumer" >
+                    <span id="phoneerror" style="color: red;" ></span>
                 </div>
                     
                 </div>
@@ -122,7 +136,8 @@
                 
                     <div class="form-group">
                         <label for="" style="color: white;">From</label><br>
-                        <input type="text" name="From" placeholder="Starting place" class="w-100" required>
+                        <input type="text" name="From" placeholder="Starting place" class="w-100" id="from">
+                        <span id="fromerror" style="color: red;" class="text-center container"></span>
                     </div>
                         
                     </div>
@@ -132,7 +147,8 @@
                 
                         <div class="form-group">
                             <label for="" style="color: white;">To</label><br>
-                            <input type="text" name="to" placeholder="Destination" class="w-100" required>
+                            <input type="text" name="to" placeholder="Destination" class="w-100" id="to">
+                            <span id="toerror" style="color: red;" class="text-center container"></span>
                         </div>
                             
                         </div>
@@ -145,7 +161,8 @@
                 
             <div class="form-group">
                 <label for="" style="color: white;">Day&Time</label><br>
-                <input type="text" name="Day&Time" placeholder="Destination" class="w-100" required>
+                <input type="date" name="Day&Time" placeholder="Destination" class="w-100" id="day-time">
+                <span id="day-time-error" style="color: red;" class="text-center container"></span>
             </div>
                 
           </div>
@@ -156,7 +173,8 @@
             <div class="form-group">
                 <label for="" style="color: white;">-</label>
                 
-                <input type="text" name="hh" placeholder="HH" class="w-100" required>
+                <input type="time" name="hh" placeholder="HH" class="w-100" id="hh">
+                <span id="hherror" style="color: red;" class="text-center container"></span>
             </div>
                 
           </div>
@@ -168,7 +186,8 @@
                 
                 <label for="" style="color: white;" >:</label>
                 
-                <input type="text" name="dd" placeholder="DD" class="w-100" required>
+                <input type="time" name="dd" placeholder="DD" class="w-100" id="dd">
+                <span id="dderror" style="color: red;" class="text-center container"></span>
             </div>
                 
           </div>
@@ -179,19 +198,21 @@
             <div class="form-group">
                 <label for="" style="color: white;">Passanger</label>
                 
-                <input type="number" name="Passanger" placeholder="PASSANGER" class="w-100" required>
+                <input type="number" name="Passanger" placeholder="PASSANGER" class="w-100" id="noPassanger" >
+                <span id="passangewr-error" style="color: red;" class="text-center container"></span>
             </div>
                 
           </div>
 
-          <!-- class -->
+          <!-- email -->
           <div class=" col-sm-3 ">
                 
             <div class="form-group">
                 
-                <label for="" style="color: white;">class</label>
+                <label for="" style="color: white;">Email</label>
                 
-                <input type="number" name="class" placeholder="class" class="w-100" required>
+                <input type="email" name="class" placeholder="ex:abdul@gmail.com" class="w-100" id="email">
+                <span id="email-error" style="color: red;" class="text-center container"></span>
             </div>
                 
           </div>
@@ -220,4 +241,5 @@
 
 
 </body>
+
 </html>
